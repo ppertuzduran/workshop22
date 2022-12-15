@@ -1,4 +1,4 @@
-#global constants
+#GLOBAL PARAMETERS
 
 env_url = "https://api-uat-001.ormuco.com"
 keystone_port= '5000'
