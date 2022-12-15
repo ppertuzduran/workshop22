@@ -18,5 +18,6 @@ def nova_service(factor, headers):
     return nova_response
 
 def nova_server_service(headers, server_specs):
-    nova_server_response = requests.post(url=f"{env_url}:{nova_port}/servers", headers=headers, json=server_specs)
-    return nova_server_response.json()
+    nova_server_response = requests.post(url=f"{env_url}:{nova_port}/servers", headers=headers, json=server_specs).json()
+    print(nova_server_response)
+    return nova_server_response
