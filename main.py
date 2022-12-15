@@ -2,7 +2,7 @@ import init
 from keystone import keystone_service
 from glance import glance_service
 from neutron import neutron_service
-from nova import nova_service
+from nova import nova_service, nova_server_service
 
 from flask import Flask, jsonify
 
@@ -98,7 +98,7 @@ server_specs = {
 #----------------------------------------------CREATE SERVER--------------------------------------------
 @app.route('/myserver')
 def mycreate_server():
-    return nova_service(factor='server', headers=headers, server_specs=server_specs)
+    return nova_server_service(headers=headers, server_specs=server_specs)
 
 if __name__ == '__main__': #Initialize flask if main file
     app.run(debug=True, port=5000)
