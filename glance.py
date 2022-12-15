@@ -1,7 +1,7 @@
 import requests
 from init import env_url, glance_port, payload
 
-image_parameter = '/v3/auth/tokens'
+image_parameter = '/v2/images'
 
 #GLANCE SERVICE
 
